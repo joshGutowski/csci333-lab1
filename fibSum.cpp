@@ -8,11 +8,14 @@ int fib(int n);
 int main() {
   int num = 0;
   int sum = 0;
-  for (int i=0; i<33; ++i) {
-    num = fib(i);
+  int iterator = 0;
+
+  while(num < 4000000) {
+    num = fib(iterator);
     if(num%2 == 0) {
       sum += num;
-    } 
+    }
+    iterator ++;
   }
   cout<< sum <<endl;
   return 0;
